@@ -563,3 +563,4 @@ ResultSet rs1 = null;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     // End of variables declaration//GEN-END:variables
+}
