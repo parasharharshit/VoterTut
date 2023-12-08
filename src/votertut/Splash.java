@@ -74,6 +74,7 @@ public class Splash extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(0, 204, 204));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 3, 26)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\paras\\OneDrive\\Desktop\\Project\\b.png")); // NOI18N
         jLabel5.setText("  Elections Management System");
 
@@ -94,7 +95,9 @@ public class Splash extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
         );
 
-        Progress.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Progress.setBackground(new java.awt.Color(255, 255, 255));
+        Progress.setFont(new java.awt.Font("Perpetua Titling MT", 1, 12)); // NOI18N
+        Progress.setForeground(new java.awt.Color(255, 153, 0));
         Progress.setStringPainted(true);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
