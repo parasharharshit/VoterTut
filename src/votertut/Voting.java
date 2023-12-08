@@ -340,7 +340,7 @@ ResultSet rs1 = null;
         DefaultTableModel model =(DefaultTableModel)CandidateTbl.getModel();
         int MyIndex = CandidateTbl.getSelectedRow();
         key = Integer.valueOf(model.getValueAt(MyIndex, 0).toString());
-        ElecId = Integer.valueOf(model.getValueAt(MyIndex, 0).toString());
+        ElecId = Integer.valueOf(model.getValueAt(MyIndex, 5).toString());
         CandNameTb.setText(model.getValueAt(MyIndex, 1).toString());
         FetchPhoto();
     }//GEN-LAST:event_CandidateTblMouseClicked

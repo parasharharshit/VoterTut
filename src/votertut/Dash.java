@@ -49,9 +49,9 @@ public class Dash extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         Bravo = new javax.swing.JLabel();
-        Bravo1 = new javax.swing.JLabel();
-        Bravo2 = new javax.swing.JLabel();
         WinnerLbl = new javax.swing.JLabel();
+        VotesLbl = new javax.swing.JLabel();
+        PerLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -125,18 +125,16 @@ public class Dash extends javax.swing.JFrame {
         Bravo.setForeground(new java.awt.Color(102, 204, 0));
         Bravo.setText("Winner");
 
-        Bravo1.setBackground(new java.awt.Color(204, 204, 204));
-        Bravo1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        Bravo1.setForeground(new java.awt.Color(102, 204, 0));
-        Bravo1.setText("Votes");
-
-        Bravo2.setBackground(new java.awt.Color(204, 204, 204));
-        Bravo2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        Bravo2.setForeground(new java.awt.Color(102, 204, 0));
-        Bravo2.setText("Percentage");
-
         WinnerLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         WinnerLbl.setText("Name");
+
+        VotesLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        VotesLbl.setForeground(new java.awt.Color(255, 0, 0));
+        VotesLbl.setText("Votes");
+
+        PerLbl.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        PerLbl.setForeground(new java.awt.Color(255, 0, 0));
+        PerLbl.setText("%");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -155,10 +153,10 @@ public class Dash extends javax.swing.JFrame {
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(CandidatePhotoLb, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Bravo2)
-                            .addComponent(Bravo1)))
+                        .addGap(55, 55, 55)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(VotesLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                            .addComponent(PerLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(Bravo)))
@@ -169,11 +167,11 @@ public class Dash extends javax.swing.JFrame {
                         .addGap(86, 86, 86)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(525, 525, 525)
-                        .addComponent(jButton4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(84, 84, 84)
-                        .addComponent(WinnerLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(WinnerLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(508, 508, 508)
+                        .addComponent(jButton4)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -193,16 +191,16 @@ public class Dash extends javax.swing.JFrame {
                         .addComponent(WinnerLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Bravo1)
-                        .addGap(34, 34, 34)
-                        .addComponent(Bravo2)
-                        .addGap(100, 100, 100)))
+                        .addComponent(VotesLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(PerLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(183, 183, 183)))
                 .addComponent(jLabel12)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(jButton4)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -216,9 +214,7 @@ public class Dash extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -232,12 +228,14 @@ public class Dash extends javax.swing.JFrame {
         key = Integer.valueOf(model.getValueAt(MyIndex, 0).toString());
         winner();
         Getwinnerdata();
+        Getvotes();
+        GetPercentage();
         
         //CandNameTb.setText(model.getValueAt(MyIndex, 1).toString());
         //FetchPhoto();
     }//GEN-LAST:event_ElectionTableMouseClicked
   
-    int winnerid;
+    int winnerid,votes,percentage;
     private void winner(){
         try{
             con=DriverManager.getConnection("jdbc:mysql://localhost:3306/election_db","root","");
@@ -280,6 +278,35 @@ public class Dash extends javax.swing.JFrame {
     }
     }
   
+        private void Getvotes(){
+        try{
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/election_db","root","");
+            st=con.createStatement(); 
+            Ru = st.executeQuery("SELECT COUNT(CandidateId) FROM Votestbl WHERE candidateid =" + winnerid) ;
+            while(Ru.next()){
+           votes= Ru.getInt(1);
+           VotesLbl.setText(votes+" Votes");
+           //JOptionPane.showMessageDialog(this,""+votes);
+            }      
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(this,e);}
+    }
+        int TVotes;double WPercent;
+                private void GetPercentage(){
+                    
+        try{
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/election_db","root","");
+            st=con.createStatement(); 
+            Ru = st.executeQuery("SELECT COUNT(*) FROM Votestbl WHERE ElectId=" + key) ;
+            while(Ru.next()){
+           TVotes= Ru.getInt(1);
+           WPercent = (votes*100)/TVotes;
+           PerLbl.setText(WPercent+" %");
+           //JOptionPane.showMessageDialog(this,""+TotalV);
+            }      
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(this,e);}
+    }
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         new Login().setVisible(true);
         this.dispose();
@@ -323,10 +350,10 @@ public class Dash extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Bravo;
-    private javax.swing.JLabel Bravo1;
-    private javax.swing.JLabel Bravo2;
     private javax.swing.JLabel CandidatePhotoLb;
     private javax.swing.JTable ElectionTable;
+    private javax.swing.JLabel PerLbl;
+    private javax.swing.JLabel VotesLbl;
     private javax.swing.JLabel WinnerLbl;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel12;
