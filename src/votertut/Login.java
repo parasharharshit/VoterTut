@@ -156,6 +156,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void RoleCbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoleCbActionPerformed
@@ -173,7 +174,7 @@ public class Login extends javax.swing.JFrame {
           if(UNameTb.getText().isEmpty()||UPassTb.getText().isEmpty()){
                JOptionPane.showMessageDialog(this,"Enter Admin UserName and Password!!");
           }else if(UNameTb.getText().equals("Admin") && UPassTb.getText().equals("Password")){
-            new Candidates().setVisible(true);
+            new MainMenu().setVisible(true);
             this.dispose();
           }else{
           JOptionPane.showMessageDialog(this,"Wrong Admin UserName and Password!!");

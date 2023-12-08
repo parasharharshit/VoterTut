@@ -144,6 +144,11 @@ public class Voters extends javax.swing.JFrame {
         BackBtn.setBackground(new java.awt.Color(255, 255, 153));
         BackBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         BackBtn.setText("Back");
+        BackBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BackBtnMouseClicked(evt);
+            }
+        });
 
         jScrollPane5.setViewportView(VAgeTb);
 
@@ -410,6 +415,11 @@ public class Voters extends javax.swing.JFrame {
         }catch(Exception e){
         JOptionPane.showMessageDialog(this,e);}}
     }//GEN-LAST:event_EditBtnMouseClicked
+
+    private void BackBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackBtnMouseClicked
+          new MainMenu().setVisible(true);
+            this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_BackBtnMouseClicked
 
     /**
      * @param args the command line arguments
